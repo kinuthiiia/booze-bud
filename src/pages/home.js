@@ -573,7 +573,7 @@ export default function Test() {
             </Button>
           </Modal>
         </div>
-        <div className="px-8 w-full flex flex-row-reverse pt-3 float-right">
+        <div className="flex pt-3 absolute right-8 bottom-[-56px]">
           <Text c="dimmed">
             <p className="tracking-tighter text-black inline text-[1.5rem] font-bold">
               {currentSection}
