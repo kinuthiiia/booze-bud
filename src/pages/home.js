@@ -6,6 +6,7 @@ import {
   Accordion,
   Avatar,
   Badge,
+  Breadcrumbs,
   Button,
   Checkbox,
   Drawer,
@@ -72,11 +73,11 @@ export default function Test() {
       id: "12",
     },
   ]);
+  const [currentSection, setCurrentSection] = useState(1);
 
   const onLeave = (origin, destination, direction) => {
     console.log("onLeave", { origin, destination, direction });
-    // arguments are mapped in order of fullpage.js callback arguments do something
-    // with the event
+    setCurrentSection(destination.index + 1);
   };
 
   const handleChangeColors = () => {
@@ -572,6 +573,14 @@ export default function Test() {
             </Button>
           </Modal>
         </div>
+        <div className="px-8 w-full flex flex-row-reverse pt-3 float-right">
+          <Text c="dimmed">
+            <p className="tracking-tighter text-black inline text-[1.5rem] font-bold">
+              {currentSection}
+            </p>
+            /{fullpages.length}
+          </Text>
+        </div>
       </div>
     );
   };
@@ -582,7 +591,7 @@ export default function Test() {
       <div style={{ zIndex: 80 }}>
         <ReactFullpage
           style={{ zIndex: 999 }}
-          navigation
+          navigation={false}
           onLeave={onLeave}
           sectionsColor={sectionsColor}
           render={(comp) => (
@@ -590,7 +599,7 @@ export default function Test() {
               <ReactFullpage.Wrapper>
                 {fullpages.map(({ id }) => (
                   <div key={id} className="section">
-                    <div className="h-[75vh] mt-[18vh] w-[95%] mx-auto relative bg-transparent">
+                    <div className="h-[70vh] mt-[18vh] w-[95%] mx-auto relative bg-transparent">
                       <img
                         src="/gilbeys-gin.webp"
                         className="w-[85%] mx-auto"
