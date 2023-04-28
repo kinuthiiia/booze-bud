@@ -599,7 +599,7 @@ export default function Test() {
               <ReactFullpage.Wrapper>
                 {fullpages.map(({ id }) => (
                   <div key={id} className="section">
-                    <div className="h-[70vh] mt-[25vh] w-[95%] mx-auto relative bg-transparent">
+                    <div className="h-[75vh] mt-[20vh] w-[95%] mx-auto relative bg-transparent">
                       <img
                         src="/gilbeys-gin.webp"
                         className="w-[68%] mx-auto "
