@@ -602,7 +602,7 @@ export default function Test() {
                     <div className="h-[70vh] mt-[18vh] w-[95%] mx-auto relative bg-transparent">
                       <img
                         src="/gilbeys-gin.webp"
-                        className="w-[85%] mx-auto"
+                        className="w-[68%] mx-auto"
                       />
                       <div className="absolute bottom-8 mx-6 flex bg-transparent">
                         <div className="space-y-1 w-3/4">
