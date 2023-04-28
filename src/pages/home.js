@@ -595,7 +595,7 @@ export default function Test() {
                         src="/gilbeys-gin.webp"
                         className="w-[85%] mx-auto"
                       />
-                      <div className="absolute bottom-0 mx-6 flex bg-transparent">
+                      <div className="absolute bottom-8 mx-6 flex bg-transparent">
                         <div className="space-y-1 w-3/4">
                           <div className="mb-1">
                             <h1 className="text-[1.8rem] font-bold px-1">
